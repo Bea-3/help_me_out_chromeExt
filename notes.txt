@@ -1,0 +1,22 @@
+key structure
+popup.js --> tab ( content scripts) <---> popup.js <---> background.js script
+
+inject content scripts to the background. include permissions
+
+
+using mediarecorder I need my chrome extension to perform the following 
+1. when the start recording button is clicked, let a function connect to an api endpoint to create a video stream id and get ready to receive the stream
+2. let the video stream append in chunks to an array and update that api endpoint that was created.
+3. when the stream ends, also update the final bytes to the endpoint.
+4. save the first 30secs of the video in Js memory for an instant replay.
+5. redirect the user to a page where they can play the instant replay.
+
+
+
+// After recording is stopped and you have the video data (recordedBlob):
+const instantReplayURL = 'https://example.com/instant-replay.html';
+
+// Create a new tab with the instant replay URL:
+chrome.tabs.create({ url: instantReplayURL }, (tab) => {
+  console.log(`Instant replay tab created with ID: ${tab.id}`);
+});
