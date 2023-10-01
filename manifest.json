@@ -23,8 +23,7 @@
     "permissions":[
         "scripting",
         "tabs",
-        "activeTab",
-        "mediaSession"
+        "activeTab"
     ],
     "version": "1.0.0"
 

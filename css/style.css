@@ -159,3 +159,13 @@
     border-radius: var(--Inner-Radius, 12px);
     background: var(--primary-main, #120B48); 
 }
+
+/* Hidden Media Controls - only show when the start button is clicked and hide when streaming stops*/
+.hide-media-controls{
+    border:1px solid black;
+    width:100%;
+    height:250px;
+    position:relative;
+    bottom:10px;
+    left:30px;
+}
